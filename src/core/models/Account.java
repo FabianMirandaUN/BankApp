@@ -1,18 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package core.models;
 
-/**
- *
- * @author edangulo
- */
 public class Account {
     
     private String id;
     private User owner;
-    private double balance;
+    double balance;
 
     public Account(String id, User owner) {
         this.id = id;
@@ -45,6 +38,20 @@ public class Account {
     public void deposit(double amount) {
         this.balance += amount;
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+    
+    
     
     public boolean withdraw(double amount) {
         if (amount > this.balance) {
